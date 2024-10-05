@@ -262,8 +262,56 @@ header .logo img {
 	width: auto;
 }
 
-.swiper-slide img {
-    mix-blend-mode: multiply; /* Tenta misturar a cor do fundo com a imagem */
+/* .swiper-slide img {
+    mix-blend-mode: multiply;
+} */
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove qualquer padding extra */
+    margin: 0; /* Remove margens extras */
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Permite o efeito 3D */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* Cor do texto alterada para preto */
+}
+
+.flip-card-front {
+    background-color: white; /* Fundo branco para a frente do card */
+}
+
+.flip-card-back {
+    background-color: white; /* Fundo branco para o verso do card */
+    transform: rotateY(180deg);
 }
 
 
@@ -464,10 +512,16 @@ header .logo img {
 	transform: rotate(180deg);
 }
 .clickable-box .clickable-content {
-	display: none;
+    max-height: 0; /* Inicialmente fechado */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa o limite */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Animação suave */
+    opacity: 0; /* Inicialmente invisível */
 }
+
+/* Quando o acordeão está ativo */
 .clickable-box.active .clickable-content {
-	display: block;
+    max-height: 500px; /* Ajuste o valor conforme necessário */
+    opacity: 1; /* Torna visível */
 }
 
 .clickable-box:hover {
