@@ -1,0 +1,967 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	--primary-color: #1cabf1;
+	--secondary-color: #1f1e62;
+	--contrast-primary-color: #ffffff;
+	--spacing: 1rem;
+	--border-radius: 8px;
+
+	--button-spacing: 0.8rem 2rem;
+}
+
+body,
+footer {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* tags estilizadas */
+
+main {
+	background-image: url('images/pattern-randomized.svg');
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat;	 
+}
+
+h1 {
+	color: var(--primary-color);
+	font-size: 32px;
+	margin: 5px 0px 10px;
+	line-height: 1.3;
+}
+
+h2 {
+	color: #070f4d;
+	font-size: 26px;
+	margin: 5px 0px 10px;
+	line-height: 1.3;
+}
+span,
+.subtitle {
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	color: #ff4a35;
+	padding: 1px;
+}
+
+p {
+	color: #75799b;
+	font-size: 14px;
+	margin: 0px 0px 10px;
+}
+
+button {
+	border: none;
+	padding: var(--button-spacing);
+	border-radius: var(--border-radius);
+	background-color: var(--primary-color);
+	color: var(--contrast-primary-color);
+	cursor: pointer;
+	box-shadow: 0 3px 3px -2px #0003, 0 3px 4px #00000024, 0 1px 8px #0000001f;
+}
+
+h4 {
+	color: #070f4d;
+	font-size: 18px;
+	margin: 5px 0px 10px;
+	line-height: 1.3;
+}
+
+/* CSS da section header */
+
+
+header .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .logo img {
+	width: auto;
+	height: 60px;
+}
+
+.menu {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-evenly;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-image: url('images/diamond-sunset1.svg');
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat;	 
+	
+	padding: 10px 20px;
+	color: white;
+	position: relative; 
+	z-index: 1; 
+}
+
+.logo img {
+	width: 100px;
+}
+
+.nav {
+	display: flex;
+}
+
+.menu {
+	display: flex;
+	list-style-type: none;
+}
+
+.menu li {
+	margin: 0 10px;
+}
+
+.menu li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	z-index: 2; /* Certifique-se de que o botão esteja acima do menu */
+}
+
+.menu-toggle .bar {
+	height: 3px;
+	width: 25px;
+	background-color: white;
+	margin: 4px 0;
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.nav {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		
+		background-image: url('images/subtle-prism.svg');
+		background-size: cover; 
+		background-position: center; 
+		background-repeat: no-repeat;	
+
+		position: absolute; /* Para garantir que o menu fique abaixo do header */
+		top: 60px; /* Ajuste para garantir que não cubra o header */
+		left: 0;
+	}
+
+	.menu {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.menu li {
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	.menu-toggle {
+		display: flex;
+	}
+
+	.nav.active {
+		display: flex;
+	}
+}
+
+/* CSS da section Home */
+.homeSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.homeSection .caixaPrincipal {
+	
+	flex-direction: column;
+
+	gap: calc(var(--spacing) / 2);
+}
+.homeSection .caixaPrincipal .buttons-actions {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	gap: calc(var(--spacing) / 2);
+}
+
+.homeSection .home-logo {
+	width: 180px;
+	margin-bottom: calc(var(--spacing) * 2);
+}
+
+.imagemHomeSection img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	padding: 40px 0px;
+	align-items: center;
+}
+
+@keyframes subirDescer {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Ajuste a distância de subida conforme necessário */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Aplique a animação à imagem na classe imagemHomeSection */
+.imagemHomeSection img {
+    animation: subirDescer 5s infinite ease-in-out;
+}
+
+/* CSS da section Breding */
+.swiper.mySwiper {
+	padding: 20px 0px;
+}
+
+.swiper.mySwiper .swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper.mySwiper .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper.mySwiper .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper.mySwiper .swiper-slide {
+	width: auto;
+}
+
+.swiper-slide img {
+    mix-blend-mode: multiply; /* Tenta misturar a cor do fundo com a imagem */
+}
+
+
+/* CSS da section AboutUs */
+
+.aboutUsSection {
+	padding: 20px 20px;
+}
+
+.imagemAboutUs img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	padding: 12px 0px;
+}
+
+/* CSS da section CTA */
+.ctaSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px;
+}
+
+.ctaSection.cta1 {
+	background-image: url('images/diamond-sunset2.svg');
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat;	 
+	
+
+	color: var(--contrast-primary-color);
+
+	margin-bottom: var(--spacing);
+}
+.ctaSection.cta1 .textoTerciario {
+	padding: var(--spacing);
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: var(--spacing);
+}
+
+.ctaSection.cta1 span,
+.ctaSection.cta1 h4,
+.ctaSection.cta1 button,
+.ctaSection.cta1 p {
+	color: var(--contrast-primary-color);
+}
+
+.ctaSection .textoTerciario {
+	flex: 3;
+}
+
+.ctaSection .imagemCtaSection {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	overflow: hidden;
+}
+.ctaSection .imagemCtaSection img {
+	height: 100%;
+	width: auto;
+}
+
+/* CSS para a seção de serviços */
+.servicesSection {
+	max-width: 100%;
+	padding: 0px 18px;
+}
+
+.quadrados {
+	padding: 0px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.quadrados .coluna {
+	padding: calc(var(--spacing)) calc(var(--spacing) / 2);
+
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+
+	transition: animation 0.3s ease;
+	position: relative;
+}
+
+.quadrados .coluna .intern-content {
+	position: relative;
+	z-index: 3;
+	background-color: transparent;
+}
+.quadrados .coluna .intern-content h3,
+.quadrados .coluna .intern-content h4 {
+	transition: color 0.5s linear;
+}
+
+.quadrados .coluna .backdrop-animate {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	bottom: 0;
+	background-color: var(--primary-color);
+	transition: width 0.5s linear;
+}
+
+.quadrados .coluna:hover .backdrop-animate {
+	width: 100%;
+	color: var(--contrast-primary-color);
+}
+.quadrados .coluna:hover .intern-content h3,
+.quadrados .coluna:hover .intern-content h4 {
+	color: var(--contrast-primary-color) !important;
+}
+
+@keyframes identifier {
+	0% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+.quadrados .coluna img {
+	max-width: 50px;
+	margin-bottom: 10px 10px;
+}
+
+.quadrados .coluna h3 {
+	font-weight: 200;
+}
+
+.quadrados .coluna h4 {
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.coluna h4 {
+	padding: 10px 10px;
+}
+
+/* CSS para a seção de Why Us */
+
+.whyUsSection {
+	padding: 20px 20px;
+}
+
+.clickable-box {
+	background-color: #ffffff;
+	padding: 20px;
+	margin: 20px 0;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+	border-radius: var(--border-radius);
+	text-align: left;
+	position: relative;
+
+	padding: var(--spacing) calc(var(--spacing) / 2);
+}
+.clickable-box i {
+	color: var(--secondary-color);
+	font-size: 1.2em;
+	transition: transform 0.3s ease;
+}
+.clickable-box .clickable-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.clickable-box.active .clickable-header {
+	margin-bottom: calc(var(--spacing) * 2);
+	position: relative;
+}
+.clickable-box.active .clickable-header::before {
+	position: absolute;
+	content: '';
+	width: 90%;
+	height: 1px;
+	border-bottom: 1px solid #ccc;
+	bottom: -10px;
+	left: 5%;
+}
+.clickable-box.active .clickable-header i {
+	transform: rotate(180deg);
+}
+.clickable-box .clickable-content {
+	display: none;
+}
+.clickable-box.active .clickable-content {
+	display: block;
+}
+
+.clickable-box:hover {
+	border-color: #1427a8;
+}
+
+.toggle-button {
+	background: none;
+	border: none;
+	font-size: 20px;
+	color: #070f4d;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	outline: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.revealed-text {
+	padding: 10px;
+	margin-top: 10px;
+	border-top: 1px solid #ccc;
+}
+
+.clickable-box.expanded {
+	padding-bottom: 0;
+}
+
+.whyUsSection .imagemWhyUs img {
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	padding: 12px 0px;
+}
+
+
+/* CSS para a seção de Comments */
+
+.commentsSection {
+	max-width: 100%;
+	padding: 0px 20px;
+}
+
+.swiper.sPortifolio {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 20px;
+}
+
+.swiper.sPortifolio .swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 150px;
+	height: 150px;
+	padding-left: 5px;
+	
+}
+
+.swiper.sPortifolio .swiper-slide img {
+	display: block;
+	width: 100%;
+}
+
+/* CSS do footer */
+
+.desktop-content {
+	display: none;
+}
+
+.mobile-content {
+	display: block;
+}
+
+footer {
+	
+	background-image: url('images/diamond-sunset1.svg');
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat;	 
+	padding: 20px;
+
+	padding: var(--spacing);
+}
+
+footer .data {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: var(--spacing);
+}
+footer .data .tituloFooter {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: var(--spacing);
+}
+footer .data .tituloFooter h2 {
+	color: var(--contrast-primary-color);
+}
+footer .data .tituloFooter img {
+	height: 40px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.textoFooter p {
+	color: white;
+}
+
+.formularioFooter {
+	padding: 20px 0px;
+	list-style-type: none;
+}
+
+.servicesFooter {
+	color: white;
+	padding: 10px;
+}
+
+.servicesFooter .linksFooter ul {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+}
+.servicesFooter .linksFooter li {
+	list-style-type: none;
+}
+.servicesFooter .linksFooter li::before {
+	content: '>';
+	margin: 0 10px;
+}
+.servicesFooter .linksFooter li a {
+	color: white;
+	text-decoration: none;
+}
+.servicesFooter .linksFooter li a:hover {
+	color: var(--secondary-color);
+}
+
+.formularioFooter {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.inputWrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.inputWrapper input[type='email'] {
+	flex: 1;
+	padding: 1.2rem 2rem;
+	padding-right: 120px;
+	font-size: 1em;
+	border: 1px solid #ddd;
+	border-radius: var(--border-radius);
+	outline: none;
+	margin-right: -1px;
+}
+
+.inputWrapper button {
+	position: absolute;
+	right: 20px;
+
+	color: white;
+	border: none;
+	padding: var(--button-spacing);
+	cursor: pointer;
+	font-size: 1em;
+	border-radius: calc(var(--border-radius) * 2);
+}
+
+.inputWrapper button:hover {
+	background-color: #070f4d;
+	color: white;
+}
+
+/* CSS para desktop!!!!! */
+@media (min-width: 768px) {
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	
+		--primary-color: #1cabf1;
+		--secondary-color: #1f1e62;
+		--contrast-primary-color: #ffffff;
+		--spacing: 1rem;
+		--border-radius: 8px;
+	
+		--button-spacing: 0.8rem 2rem;
+	}
+	
+	body,
+	footer {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	
+	}
+	
+	/* tags estilizadas */
+
+	h1 {
+		color: var(--primary-color);
+		font-size: 48px;
+		margin: 5px 0px 10px;
+		line-height: 1.3;
+	}
+
+	h2 {
+		color: #070f4d;
+		font-size: 26px;
+		margin: 5px 0px 10px;
+		line-height: 1.3;
+	}
+
+	span,
+	.subtitle {
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		color: #ff4a35;
+		padding: 1px;
+	}
+
+	p {
+		color: #75799b;
+		font-size: 14px;
+		margin: 0px 0px 10px;
+	}
+
+	button {
+		border: none;
+		padding: var(--button-spacing);
+		border-radius: var(--border-radius);
+		background-color: var(--primary-color);
+		color: var(--contrast-primary-color);
+		cursor: pointer;
+		box-shadow: 0 3px 3px -2px #0003, 0 3px 4px #00000024, 0 1px 8px #0000001f;
+	}
+
+	h4 {
+		color: #070f4d;
+		font-size: 32px;
+		margin: 5px 0px 10px;
+		line-height: 1.3;
+	}
+	
+	/* CSS da homeSection de Desktop */
+	
+	.homeSection {
+        flex-direction: row;
+        justify-content: space-between;
+		padding: 120px 120px;
+		font-size: 2em;
+		max-width: 1500px;
+		margin: 0 auto;
+    }
+
+    .caixaPrincipal, .imagemHomeSection {
+        width: 50%;
+    }
+
+    .caixaPrincipal {
+        padding-right: 20px; 
+    }
+
+    .imagemHomeSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px; 
+    }
+
+    .imagemHomeSection img {
+        max-width:100%;
+        height: auto;
+    }
+	
+    /* CSS da brading de Desktop */
+
+	.brading {
+		padding: 50px 100px;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+	.swiper-wrapper{
+		gap: 100px;
+	}
+	
+	/* CSS da aboutUs de Desktop */
+
+	.aboutUsSection {
+		padding: 50px 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+
+	.imagemAboutUs {
+		display: flex;
+		align-items: center; /* Centraliza verticalmente */
+		justify-content: center; /* Centraliza horizontalmente */
+		height: 100%; /* Certifique-se de que a altura da div está definida */
+		padding: 12px 0; /* Padding opcional */
+		box-sizing: border-box; /* Inclui o padding na altura total */
+	}
+	
+	.imagemAboutUs img {
+		max-width: 80%;
+		height: auto;
+	}
+	
+	
+
+	.aboutUsSection .textoSecundario {
+		width: 80%;
+	}
+
+	/* CSS da section CTA de Desktop */
+
+	.ctaSection.cta1 .textoTerciario {
+		display: flex;
+		align-items: center;
+	}
+
+	/* CSS da section services de Desktop */
+
+	.servicesSection {
+		padding: 50px 100px;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+
+	.servicesSection .serviceDiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.quadrados {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	
+	.coluna {
+		padding: 20px;
+		margin: 10px;
+		flex: 1 1 calc(33.333% - 40px);
+		box-sizing: border-box;
+		box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+		border-radius: var(--border-radius);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+	
+	.coluna:hover {
+		transform: translateY(-10px);
+	}
+	
+	.coluna img {
+		max-width: 100px;
+		margin-bottom: 15px;
+	}
+	
+	.coluna h3 {
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+	
+	.coluna h4 {
+		font-size: 1em;
+		color: #555;
+	}
+
+	/* CSS da section Why Us de Desktop */
+
+	.whyUsSection {
+		padding: 50px 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1500px;
+		margin: 0 auto;
+	}
+
+	.whyUsSection .imagemWhyUs img {
+		max-width: 90%;
+		height: auto;
+	}
+
+	/* CSS da section CTA de Desktop */
+
+	.ctaSection {
+		padding: 50px 100px;
+	}
+
+	/* CSS da section Comments de Desktop */
+
+	.commentsSection {
+		padding: 50px 100px;
+		max-width: 1500px;
+		margin: 0 auto;
+		
+	}
+	
+	.ourPortfolio {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	/* CSS do footer do Desktop */
+
+	.desktop-content {
+		display: block;
+	}
+	
+	.mobile-content {
+		display: none;
+	}
+
+	.desktop-content {
+		display: flex;
+		justify-content: space-between; /* Distribui espaço igual entre os elementos */
+		align-items: flex-start; /* Alinha os itens ao topo */
+	}
+	
+	.data, .informacoes {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.desktop-content .data {
+		display: flex;
+		align-items: normal;
+	}
+	
+	.data {
+		display: flex;
+		flex-direction: column; 
+		justify-content: space-between;
+	}
+	
+	.informacoes {
+		display: flex;
+		flex-direction: column; /* Mantém os elementos em linha */
+		align-items: flex-start; /* Alinha os itens à esquerda */
+	}
+	
+	/* Definindo as proporções */
+	.tituloFooter {
+		flex: 0 0 40%; /* 40% da largura disponível */
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; /* Alinha os itens ao topo */
+	}
+	
+	.informacoes {
+		flex: 0 0 60%; /* 60% da largura disponível */
+		display: flex; /* Mantém o layout flexível */
+		flex-direction: column;
+		align-items: flex-start; /* Alinha os itens ao topo */
+	}
+	
+	.tituloFooter p {
+		color: white;
+	}
+	
+	.servicesFooter {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	
+}
