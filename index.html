@@ -20,6 +20,8 @@
     <!-- meu estilo CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 
 </head>
 
@@ -30,11 +32,11 @@
         </div>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutUs">About us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#whyUs">Why us</a></li>
-                <li><a href="#comments">Comments</a></li>
+                <li><a href="#home">Ínicio</a></li>
+                <li><a href="#aboutUs">Quem Somos</a></li>
+                <li><a href="#services">Nossos Serviços</a></li>
+                <li><a href="#whyUs">Nossos Diferenciais</a></li>
+                <li><a href="#comments">Nossos Principais Produtos</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
@@ -298,106 +300,77 @@
 
         <section class="commentsSection" id="comments">
             <div class="ourPortfolio">
-                <span>Nossos produtos</span>
+                <span>Nossos principais produtos</span>
                 <h4>Quem confia na Thinkless Soft. House</h4>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-                    looking at its layout. </p>
+                <p>Atendemos uma variedade de clientes, desde startups a empresas consolidadas, que confiam em nossas soluções para melhorar seus processos e resultados. Entre eles:</p>
             </div>
-                <!-- <div class="swiper-wrapper">
+        
+            <div class="swiper sPortifolioSwiper">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/servico1.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico2.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico3.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico4.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico1.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico2.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico3.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/servico4.jpg" />
-                    </div>
-
-                </div> -->
-
-                <div class="swiper sPortifolioSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <h2>Collegato – Sistema de Agendamento de Salas</h2>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Collegato – Sistema de Agendamento de Salas</p>
-                                    </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Collegato – Sistema de Agendamento de Salas</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Collegato – Sistema de Agendamento de Salas</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <h2>Tay Training – Aplicativo de Treinos Personalizados</h2>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>App para treinos personalizados que permite às instrutoras criar e acompanhar a evolução das alunas.</p>
-                                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Tay Training – Aplicativo de Treinos Personalizados</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>App para treinos personalizados que permite às instrutoras criar e acompanhar a evolução das alunas.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <h2>Weburn – Aplicação de Treinos Integrada</h2>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Solução de treino integrada a múltiplos sistemas, acessível em diversas plataformas.</p>
-                                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Weburn – Aplicação de Treinos Integrada</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Solução de treino integrada a múltiplos sistemas, acessível em diversas plataformas.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <h2>Checkup Vet – CRM + PDV para Clínicas Veterinárias</h2>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Sistema CRM + PDV para clínicas veterinárias, otimizando agendamentos, consultas e vendas.</p>
-                                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Checkup Vet – CRM + PDV para Clínicas Veterinárias</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Sistema CRM + PDV para clínicas veterinárias, otimizando agendamentos, consultas e vendas.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <h2>Doni e Advocacia Leal – Websites Profissionais</h2>
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <p>Desenvolvimento de sites com design moderno, responsivo e otimização para SEO.</p>
-                                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Doni e Advocacia Leal – Websites Profissionais</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Desenvolvimento de sites com design moderno, responsivo e otimização para SEO.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-
+            </div>
         </section>
+        
 
         <!-- <section class="ctaSection cta1">
             <div class="textoTerciario">
@@ -430,11 +403,11 @@
             <div class="servicesFooter">
                 <h3 class="servicesFooter">Services</h3>
                 <ul class="linksFooter">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutUs">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#whyUs">Why Us</a></li>
-                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#home">Ínicio</a></li>
+                    <li><a href="#aboutUs">Quem Somos</a></li>
+                    <li><a href="#services">Nossos Serviços</a></li>
+                    <li><a href="#whyUs">Nossos Diferenciais</a></li>
+                    <li><a href="#comments">Nossos Principais Produtos</a></li>
                 </ul>
             </div>
         </div>
@@ -443,7 +416,7 @@
             <div class="data">
                 <div class="tituloFooter">
                     <img src="images/logo-complete-white.png" alt="logo">
-                    <p> Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+                    <p>Thinkless Soft. House – Simplificando a tecnologia para você crescer.</p>
                 </div>
             </div>
             <div class="informacoes">
@@ -454,11 +427,11 @@
                 <div class="servicesFooter">
                     <h3 class="servicesFooter">Services</h3>
                     <ul class="linksFooter">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#aboutUs">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#whyUs">Why Us</a></li>
-                        <li><a href="#comments">Comments</a></li>
+                        <li><a href="#home">Ínicio</a></li>
+                        <li><a href="#aboutUs">Quem Somos</a></li>
+                        <li><a href="#services">Nossos Serviços</a></li>
+                        <li><a href="#whyUs">Nossos Diferenciais</a></li>
+                        <li><a href="#comments">Nossos Principais Produtos</a></li>
                     </ul>
                 </div>
             </div>
@@ -467,6 +440,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 

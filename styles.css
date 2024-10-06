@@ -23,9 +23,9 @@ footer {
 
 main {
 	background-image: url('images/pattern-randomized.svg');
-	background-size: cover; 
-	background-position: center; 
-	background-repeat: no-repeat;	 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 h1 {
@@ -41,6 +41,7 @@ h2 {
 	margin: 5px 0px 10px;
 	line-height: 1.3;
 }
+
 span,
 .subtitle {
 	box-sizing: border-box;
@@ -80,6 +81,7 @@ header .logo {
 	align-items: center;
 	justify-content: center;
 }
+
 header .logo img {
 	width: auto;
 	height: 60px;
@@ -97,14 +99,14 @@ header .logo img {
 	align-items: center;
 
 	background-image: url('images/diamond-sunset1.svg');
-	background-size: cover; 
-	background-position: center; 
-	background-repeat: no-repeat;	 
-	
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 	padding: 10px 20px;
 	color: white;
-	position: relative; 
-	z-index: 1; 
+	position: relative;
+	z-index: 1;
 }
 
 .logo img {
@@ -134,7 +136,8 @@ header .logo img {
 	display: none;
 	flex-direction: column;
 	cursor: pointer;
-	z-index: 2; /* Certifique-se de que o botão esteja acima do menu */
+	z-index: 2;
+	/* Certifique-se de que o botão esteja acima do menu */
 }
 
 .menu-toggle .bar {
@@ -150,14 +153,16 @@ header .logo img {
 		display: none;
 		flex-direction: column;
 		width: 100%;
-		
-		background-image: url('images/subtle-prism.svg');
-		background-size: cover; 
-		background-position: center; 
-		background-repeat: no-repeat;	
 
-		position: absolute; /* Para garantir que o menu fique abaixo do header */
-		top: 60px; /* Ajuste para garantir que não cubra o header */
+		background-image: url('images/subtle-prism.svg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		position: absolute;
+		/* Para garantir que o menu fique abaixo do header */
+		top: 60px;
+		/* Ajuste para garantir que não cubra o header */
 		left: 0;
 	}
 
@@ -189,11 +194,12 @@ header .logo img {
 }
 
 .homeSection .caixaPrincipal {
-	
+
 	flex-direction: column;
 
 	gap: calc(var(--spacing) / 2);
 }
+
 .homeSection .caixaPrincipal .buttons-actions {
 	display: flex;
 	justify-content: flex-start;
@@ -216,20 +222,23 @@ header .logo img {
 }
 
 @keyframes subirDescer {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px); /* Ajuste a distância de subida conforme necessário */
-    }
-    100% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20px);
+		/* Ajuste a distância de subida conforme necessário */
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
 
 /* Aplique a animação à imagem na classe imagemHomeSection */
 .imagemHomeSection img {
-    animation: subirDescer 5s infinite ease-in-out;
+	animation: subirDescer 5s infinite ease-in-out;
 }
 
 /* CSS da section Breding */
@@ -266,54 +275,6 @@ header .logo img {
     mix-blend-mode: multiply;
 } */
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0; /* Remove qualquer padding extra */
-    margin: 0; /* Remove margens extras */
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px; /* Permite o efeito 3D */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black; /* Cor do texto alterada para preto */
-}
-
-.flip-card-front {
-    background-color: white; /* Fundo branco para a frente do card */
-}
-
-.flip-card-back {
-    background-color: white; /* Fundo branco para o verso do card */
-    transform: rotateY(180deg);
-}
-
 
 /* CSS da section AboutUs */
 
@@ -338,15 +299,16 @@ header .logo img {
 
 .ctaSection.cta1 {
 	background-image: url('images/diamond-sunset2.svg');
-	background-size: cover; 
-	background-position: center; 
-	background-repeat: no-repeat;	 
-	
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
 
 	color: var(--contrast-primary-color);
 
 	margin-bottom: var(--spacing);
 }
+
 .ctaSection.cta1 .textoTerciario {
 	padding: var(--spacing);
 	display: flex;
@@ -375,6 +337,7 @@ header .logo img {
 	height: 300px;
 	overflow: hidden;
 }
+
 .ctaSection .imagemCtaSection img {
 	height: 100%;
 	width: auto;
@@ -414,6 +377,7 @@ header .logo img {
 	z-index: 3;
 	background-color: transparent;
 }
+
 .quadrados .coluna .intern-content h3,
 .quadrados .coluna .intern-content h4 {
 	transition: color 0.5s linear;
@@ -434,6 +398,7 @@ header .logo img {
 	width: 100%;
 	color: var(--contrast-primary-color);
 }
+
 .quadrados .coluna:hover .intern-content h3,
 .quadrados .coluna:hover .intern-content h4 {
 	color: var(--contrast-primary-color) !important;
@@ -443,6 +408,7 @@ header .logo img {
 	0% {
 		transform: scale(0.9);
 	}
+
 	100% {
 		transform: scale(1.1);
 	}
@@ -485,20 +451,24 @@ header .logo img {
 
 	padding: var(--spacing) calc(var(--spacing) / 2);
 }
+
 .clickable-box i {
 	color: var(--secondary-color);
 	font-size: 1.2em;
 	transition: transform 0.3s ease;
 }
+
 .clickable-box .clickable-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
+
 .clickable-box.active .clickable-header {
 	margin-bottom: calc(var(--spacing) * 2);
 	position: relative;
 }
+
 .clickable-box.active .clickable-header::before {
 	position: absolute;
 	content: '';
@@ -508,20 +478,28 @@ header .logo img {
 	bottom: -10px;
 	left: 5%;
 }
+
 .clickable-box.active .clickable-header i {
 	transform: rotate(180deg);
 }
+
 .clickable-box .clickable-content {
-    max-height: 0; /* Inicialmente fechado */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassa o limite */
-    transition: max-height 0.5s ease, opacity 0.5s ease; /* Animação suave */
-    opacity: 0; /* Inicialmente invisível */
+	max-height: 0;
+	/* Inicialmente fechado */
+	overflow: hidden;
+	/* Oculta o conteúdo que ultrapassa o limite */
+	transition: max-height 0.5s ease, opacity 0.5s ease;
+	/* Animação suave */
+	opacity: 0;
+	/* Inicialmente invisível */
 }
 
 /* Quando o acordeão está ativo */
 .clickable-box.active .clickable-content {
-    max-height: 500px; /* Ajuste o valor conforme necessário */
-    opacity: 1; /* Torna visível */
+	max-height: 500px;
+	/* Ajuste o valor conforme necessário */
+	opacity: 1;
+	/* Torna visível */
 }
 
 .clickable-box:hover {
@@ -564,7 +542,7 @@ header .logo img {
 
 /* CSS para a seção de Comments */
 
-.commentsSection {
+/* .commentsSection {
 	max-width: 100%;
 	padding: 0px 20px;
 }
@@ -588,7 +566,73 @@ header .logo img {
 .swiper.sPortifolio .swiper-slide img {
 	display: block;
 	width: 100%;
+} */
+
+/* Estilos para a seção de comentários */
+.commentsSection {
+	max-width: 100%;
+	padding: 0px 20px;
 }
+
+.swiper.sPortifolioSwiper {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.swiper.sPortifolioSwiper .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%; /* Cada slide ocupará 100% da largura no mobile */
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 100%;
+	max-width: 300px;
+	height: 300px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+}
+
+.flip-card-front {
+	background-color: white;
+}
+
+.flip-card-back {
+	background-color: white;
+	transform: rotateY(180deg);
+}
+
+.swiper.sPortifolioSwiper .swiper-pagination {
+	position: relative;
+	bottom: 10px;
+}
+
 
 /* CSS do footer */
 
@@ -601,11 +645,11 @@ header .logo img {
 }
 
 footer {
-	
+
 	background-image: url('images/diamond-sunset1.svg');
-	background-size: cover; 
-	background-position: center; 
-	background-repeat: no-repeat;	 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	padding: 20px;
 
 	padding: var(--spacing);
@@ -619,15 +663,18 @@ footer .data {
 	flex-direction: column;
 	gap: var(--spacing);
 }
+
 footer .data .tituloFooter {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	gap: var(--spacing);
 }
+
 footer .data .tituloFooter h2 {
 	color: var(--contrast-primary-color);
 }
+
 footer .data .tituloFooter img {
 	height: 40px;
 }
@@ -656,17 +703,21 @@ html {
 	list-style-type: none;
 	padding: 0;
 }
+
 .servicesFooter .linksFooter li {
 	list-style-type: none;
 }
+
 .servicesFooter .linksFooter li::before {
 	content: '>';
 	margin: 0 10px;
 }
+
 .servicesFooter .linksFooter li a {
 	color: white;
 	text-decoration: none;
 }
+
 .servicesFooter .linksFooter li a:hover {
 	color: var(--secondary-color);
 }
@@ -686,6 +737,7 @@ html {
 	align-items: center;
 	width: 100%;
 }
+
 .inputWrapper input[type='email'] {
 	flex: 1;
 	padding: 1.2rem 2rem;
@@ -721,24 +773,24 @@ html {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-	
+
 		--primary-color: #1cabf1;
 		--secondary-color: #1f1e62;
 		--contrast-primary-color: #ffffff;
 		--spacing: 1rem;
 		--border-radius: 8px;
-	
+
 		--button-spacing: 0.8rem 2rem;
 	}
-	
+
 	body,
 	footer {
 		font-family: 'Poppins', sans-serif;
 		font-weight: 600;
 		font-style: normal;
-	
+
 	}
-	
+
 	/* tags estilizadas */
 
 	h1 {
@@ -785,49 +837,51 @@ html {
 		margin: 5px 0px 10px;
 		line-height: 1.3;
 	}
-	
+
 	/* CSS da homeSection de Desktop */
-	
+
 	.homeSection {
-        flex-direction: row;
-        justify-content: space-between;
+		flex-direction: row;
+		justify-content: space-between;
 		padding: 120px 120px;
 		font-size: 2em;
 		max-width: 1500px;
 		margin: 0 auto;
-    }
+	}
 
-    .caixaPrincipal, .imagemHomeSection {
-        width: 50%;
-    }
+	.caixaPrincipal,
+	.imagemHomeSection {
+		width: 50%;
+	}
 
-    .caixaPrincipal {
-        padding-right: 20px; 
-    }
+	.caixaPrincipal {
+		padding-right: 20px;
+	}
 
-    .imagemHomeSection {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 20px; 
-    }
+	.imagemHomeSection {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 20px;
+	}
 
-    .imagemHomeSection img {
-        max-width:100%;
-        height: auto;
-    }
-	
-    /* CSS da brading de Desktop */
+	.imagemHomeSection img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* CSS da brading de Desktop */
 
 	.brading {
 		padding: 50px 100px;
 		max-width: 1500px;
 		margin: 0 auto;
 	}
-	.swiper-wrapper{
+
+	.swiper-wrapper {
 		gap: 100px;
 	}
-	
+
 	/* CSS da aboutUs de Desktop */
 
 	.aboutUsSection {
@@ -841,19 +895,24 @@ html {
 
 	.imagemAboutUs {
 		display: flex;
-		align-items: center; /* Centraliza verticalmente */
-		justify-content: center; /* Centraliza horizontalmente */
-		height: 100%; /* Certifique-se de que a altura da div está definida */
-		padding: 12px 0; /* Padding opcional */
-		box-sizing: border-box; /* Inclui o padding na altura total */
+		align-items: center;
+		/* Centraliza verticalmente */
+		justify-content: center;
+		/* Centraliza horizontalmente */
+		height: 100%;
+		/* Certifique-se de que a altura da div está definida */
+		padding: 12px 0;
+		/* Padding opcional */
+		box-sizing: border-box;
+		/* Inclui o padding na altura total */
 	}
-	
+
 	.imagemAboutUs img {
 		max-width: 80%;
 		height: auto;
 	}
-	
-	
+
+
 
 	.aboutUsSection .textoSecundario {
 		width: 80%;
@@ -888,7 +947,7 @@ html {
 		margin: 0 auto;
 		padding: 20px;
 	}
-	
+
 	.coluna {
 		padding: 20px;
 		margin: 10px;
@@ -899,21 +958,21 @@ html {
 		text-align: center;
 		transition: transform 0.3s ease;
 	}
-	
+
 	.coluna:hover {
 		transform: translateY(-10px);
 	}
-	
+
 	.coluna img {
 		max-width: 100px;
 		margin-bottom: 15px;
 	}
-	
+
 	.coluna h3 {
 		font-size: 1.2em;
 		margin-bottom: 10px;
 	}
-	
+
 	.coluna h4 {
 		font-size: 1em;
 		color: #555;
@@ -943,79 +1002,93 @@ html {
 
 	/* CSS da section Comments de Desktop */
 
-	.commentsSection {
-		padding: 50px 100px;
-		max-width: 1500px;
-		margin: 0 auto;
-		
+	.swiper.sPortifolioSwiper .swiper-slide {
+		width: auto; /* Permite múltiplos slides no desktop */
+		margin-right: 10px;
 	}
-	
-	.ourPortfolio {
-		text-align: center;
-		margin-bottom: 40px;
+
+	.flip-card {
+		width: 300px;
+		height: 300px;
 	}
+
+	.swiper.sPortifolioSwiper .swiper-wrapper {
+		display: flex;
+		gap: 10px; /* Espaçamento entre os slides */
+	}
+
 
 	/* CSS do footer do Desktop */
 
 	.desktop-content {
 		display: block;
 	}
-	
+
 	.mobile-content {
 		display: none;
 	}
 
 	.desktop-content {
 		display: flex;
-		justify-content: space-between; /* Distribui espaço igual entre os elementos */
-		align-items: flex-start; /* Alinha os itens ao topo */
+		justify-content: space-between;
+		/* Distribui espaço igual entre os elementos */
+		align-items: flex-start;
+		/* Alinha os itens ao topo */
 	}
-	
-	.data, .informacoes {
+
+	.data,
+	.informacoes {
 		display: flex;
 		justify-content: space-between;
 	}
-	
+
 	.desktop-content .data {
 		display: flex;
 		align-items: normal;
 	}
-	
+
 	.data {
 		display: flex;
-		flex-direction: column; 
+		flex-direction: column;
 		justify-content: space-between;
 	}
-	
+
 	.informacoes {
 		display: flex;
-		flex-direction: column; /* Mantém os elementos em linha */
-		align-items: flex-start; /* Alinha os itens à esquerda */
+		flex-direction: column;
+		/* Mantém os elementos em linha */
+		align-items: flex-start;
+		/* Alinha os itens à esquerda */
 	}
-	
+
 	/* Definindo as proporções */
 	.tituloFooter {
-		flex: 0 0 40%; /* 40% da largura disponível */
+		flex: 0 0 40%;
+		/* 40% da largura disponível */
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start; /* Alinha os itens ao topo */
+		align-items: flex-start;
+		/* Alinha os itens ao topo */
 	}
-	
+
 	.informacoes {
-		flex: 0 0 60%; /* 60% da largura disponível */
-		display: flex; /* Mantém o layout flexível */
+		flex: 0 0 60%;
+		/* 60% da largura disponível */
+		display: flex;
+		/* Mantém o layout flexível */
 		flex-direction: column;
-		align-items: flex-start; /* Alinha os itens ao topo */
+		align-items: flex-start;
+		/* Alinha os itens ao topo */
 	}
-	
+
 	.tituloFooter p {
 		color: white;
 	}
-	
+
 	.servicesFooter {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 	}
-	
+
 }
