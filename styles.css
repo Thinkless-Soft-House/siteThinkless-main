@@ -821,6 +821,10 @@ html {
 		margin: 0px 0px 10px;
 	}
 
+	.menu {
+		gap: 30px;
+	}
+
 	button {
 		border: none;
 		padding: var(--button-spacing);
