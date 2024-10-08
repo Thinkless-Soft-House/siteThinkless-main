@@ -71,10 +71,7 @@ const menuToggle = document.getElementById('mobile-menu');
 const nav = document.querySelector('.nav');
 
 menuToggle.addEventListener('click', () => {
-	nav.classList.toggle('active');
-});
-
-menuToggle.addEventListener('click', () => {
+	console.log("Menu toggled");
 	nav.classList.toggle('active');
 });
 
@@ -97,20 +94,6 @@ function toggleAccordion(id) {
 
 	console.log("Accordion toggled");
 }
-
-// if (typeof Swiper !== 'undefined') {
-// 	const swiper = new Swiper('.swiper', {
-// 		slidesPerView: 3,
-// 		spaceBetween: 30,
-// 		loop: true,
-// 		autoplay: {
-// 			delay: 3000,
-// 			disableOnInteraction: false,
-// 		}
-// 	});
-// }
-
-
 
 
 
