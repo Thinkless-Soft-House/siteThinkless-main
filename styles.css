@@ -97,7 +97,6 @@ header .logo img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 	background-image: url('images/diamond-sunset1.svg');
 	background-size: cover;
 	background-position: center;
